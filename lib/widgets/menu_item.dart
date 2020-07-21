@@ -68,9 +68,12 @@ class _MenuItemState extends State<MenuItem> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15),
                       topRight: Radius.circular(15)),
-                  child: Image.network(widget.imgurl, height: 250,
-                    width: double.infinity,
-                    fit: BoxFit.cover,),
+                  child: Hero(
+                    tag: widget.id,
+                    child: Image.network(widget.imgurl, height: 250,
+                      width: double.infinity,
+                      fit: BoxFit.cover,),
+                  ),
                 ),
                 Positioned(
                   bottom: 20,

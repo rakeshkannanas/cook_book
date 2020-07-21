@@ -45,11 +45,14 @@ class MenuDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              selectedMenu.imageUrl,
-              fit: BoxFit.cover,
-              height: 250,
-              width: double.infinity,
+            Hero(
+              tag: selectedMenu.id,
+              child: Image.network(
+                selectedMenu.imageUrl,
+                fit: BoxFit.cover,
+                height: 250,
+                width: double.infinity,
+              ),
             ),
             Container(
               padding: EdgeInsets.all(10),
